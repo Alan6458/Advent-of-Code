@@ -2,7 +2,7 @@ inp = """
 """
 
 # I had to comb through my input lol
-# I am so so sorry...
+# But I fixed it by adding a little to one line
 
 inp = inp.split("\n\n")
 inp = [i for i in inp if i]
@@ -89,18 +89,11 @@ for i in cfOr:
         r.add(i)
 
 for i in cfXor:
-    if i not in zL and (i not in gtXor or i not in gtAnd or i in gtOr):
+    if i not in zL and (i not in gtXor or i not in gtAnd or i in gtOr or i not in exL):
         r.add(i)
 
 for i in cfAnd:
     if i != anL[0] and (i in gtAnd or i in gtXor or i not in gtOr):
         r.add(i)
 
-# r.add("")
-if len(r) < 8:
-    print("Sorry, but you gotta go through manually for the last one(s).\n")
-    print("Here's some help:")
-    for i in r:
-        print(i, " from and:",  i in cfAnd, " from or:", i in cfOr, " from xor:", i in cfXor, " to and:", i in gtAnd, " to or:", i in gtOr, " to xor:", i in gtXor)
-else:
-    print(",".join(sorted(list(r))))
+print(",".join(sorted(list(r))))
