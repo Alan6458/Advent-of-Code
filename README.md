@@ -1,2 +1,3 @@
-# Advent-of-Code-2024
-Code for Advent of Code 2024
+# Advent-of-Code
+
+My solutions for Advent of Code
